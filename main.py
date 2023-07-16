@@ -61,9 +61,33 @@ while i <= 10:
 # 4. Data Structures
 """
 4.0 Methods 
-Method - data에 bound 되는 function. (특정 데이터에 대하여 어떤 작업을 실행하는 function의 유형)
-"""
+Method - data에 bound 되는 function. 앞에 data 값 없이 단독으로 호출할 수는 없다.
+(특정 데이터에 대하여 어떤 작업을 실행하는(mutate) function의 유형)
 name = "NICO"
 print(name.replace("O", "a"))
 print(name.endswith("O"))
 print(name.isupper())
+"""
+
+"""
+4.1 Lists
+"""
+
+days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+
+# print(days_of_week.count("Wed"))
+# days_of_week.reverse()
+print(days_of_week)
+days_of_week.append("Sat")
+print(days_of_week)
+days_of_week.append("Sun")
+print(days_of_week)
+days_of_week.remove("Sun")
+print(days_of_week)
+print(days_of_week[2])
+print(days_of_week[0])
+print(days_of_week[1])
+# 리스트 이름 뒤에 []를 입력하면 그 안에 있는 개별 항에 접근할 수 있는데, 그 순서는 인덱스에 따르는데 0부터 시작한다.
+# 하나의 리스트 안에 항목들은 모두 동일한 타입일 필요는 없고, 다양할 수 있다.
+days_of_week.append([1, 2, 3])
+print(days_of_week)
