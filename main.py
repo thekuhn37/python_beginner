@@ -28,17 +28,17 @@ Basic!
 """
 
 
-# 2.4 Python Standard Library
+# 3.4 Python Standard Library
 from random import randint, random
 
 # phython standard library 의 random module에서 randint 함수(function)를 호출
-
+"""
 print("Welcome to Python Casino")
 pc_choice = randint(1, 50)
 playing = True
 
 while playing:
-    user_choice = int(input("Choose number:"))
+    user_choice = int(input("Choose number(1-50):"))
     if user_choice == pc_choice:
         print("You Won!")
         playing = False
@@ -46,7 +46,7 @@ while playing:
         print("Lower!")
     elif user_choice < pc_choice:
         print("Higher!")
-
+"""
 
 """"
 [while문]
@@ -56,3 +56,14 @@ while i <= 10:
     i = i + 1
 # while 뒤에 따라오는 조건문(condition)이 참인 동안, 그 뒤에 결과 행동이 반복적으로 실행된다.
 """
+
+
+# 4. Data Structures
+"""
+4.0 Methods 
+Method - data에 bound 되는 function. (특정 데이터에 대하여 어떤 작업을 실행하는 function의 유형)
+"""
+name = "NICO"
+print(name.replace("O", "a"))
+print(name.endswith("O"))
+print(name.isupper())
