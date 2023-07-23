@@ -160,8 +160,10 @@ for website in websites:
     if response.status_code == 200:
         # print(f"{website} is okay.")
         results[website] = "OK"
-    else:
+    elif response.status_code > 200 and response.status_code < 300:
         # print(f"{website} is not okay.")
-        results[website] = "FAILED"
+        results[website] = "Fine"
+    elif response.status_code >= 300 and response.status_code < 400:
+        results[website] = "Not Bad"
 
 print(results)
