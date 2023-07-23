@@ -72,9 +72,8 @@ print(name.isupper())
 """
 4.1 Lists
 """
-
+"""
 days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri"]
-
 # print(days_of_week.count("Wed"))
 # days_of_week.reverse()
 print(days_of_week)
@@ -91,3 +90,20 @@ print(days_of_week[1])
 # 하나의 리스트 안에 항목들은 모두 동일한 타입일 필요는 없고, 다양할 수 있다.
 days_of_week.append([1, 2, 3])
 print(days_of_week)
+"""
+
+TOEICVoca = [{"country": "국가"}, {"war", "전쟁"}, {"determination", "결정"}]
+print(TOEICVoca)
+TOEICVoca.append({"Beverage": "음료"})
+print(TOEICVoca)
+print(TOEICVoca[2])
+
+Player = {
+    "name": "HDH",
+    "Age": "32",
+    "Nationality": "Korea",
+    "hobby": ["boxing", "running"],
+}
+print(Player["Nationality"])
+Player["hobby"].append("drawing")
+print(Player["hobby"][2])
