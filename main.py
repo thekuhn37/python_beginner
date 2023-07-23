@@ -29,7 +29,7 @@ Basic!
 
 
 # 3.4 Python Standard Library
-from random import randint, random
+# from random import randint, random
 
 # phython standard library 의 random module에서 randint 함수(function)를 호출
 """
@@ -92,6 +92,8 @@ days_of_week.append([1, 2, 3])
 print(days_of_week)
 """
 
+"""
+4.4 Recap
 TOEICVoca = [{"country": "국가"}, {"war", "전쟁"}, {"determination", "결정"}]
 print(TOEICVoca)
 TOEICVoca.append({"Beverage": "음료"})
@@ -106,4 +108,60 @@ Player = {
 }
 print(Player["Nationality"])
 Player["hobby"].append("drawing")
-print(Player["hobby"][2])
+print(Player["hobby"])
+"""
+
+
+# 4.5 For Loops
+
+# we can run the code for each item in the sequence(list or tuple) and we can access the item at each cycle.
+
+# 4.6 URL Formatting
+
+# if website.startswith("https://"):
+#     print("good to go to", website)
+# else:
+#     print("we have to fix it")
+
+
+# 4.7 Request
+# sometimes we use module packages which is not included in the standard Pyhthon library.
+# "PyPI where you can find modules made by people."
+
+# terminal에서 : pip3 install requests 라치니 requests 설치
+
+# 4.9 Status Code
+
+from requests import get
+
+# get : 웹사이트의 정보를 가져오는 함수
+
+websites = (
+    "google.com",
+    "airbnb.com",
+    "https://twitter.com",
+    "facebook.com",
+    "https://tiktok.com",
+)
+# for website in websites:
+#     print('The website "', website, '" works properly.')
+
+results = {}
+
+
+for website in websites:
+    if not website.startswith("https://"):
+        website = f"https://{website}"
+    # print(website)
+
+    response = get(website)
+    # print(response.status_code)
+    # response [200] : the website responded properly.
+    if response.status_code == 200:
+        # print(f"{website} is okay.")
+        results[website] = "OK"
+    else:
+        # print(f"{website} is not okay.")
+        results[website] = "FAILED"
+
+print(results)
